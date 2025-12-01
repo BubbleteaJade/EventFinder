@@ -11,6 +11,8 @@ module Frontend.eventfinder {
     requires eu.hansolo.tilesfx;
     requires javafx.base;
     requires javafx.graphics;
+    requires com.google.gson;
+    requires serpapi.client;
 
     opens Frontend.eventfinder to javafx.fxml;
     exports Frontend.eventfinder;
