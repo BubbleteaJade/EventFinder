@@ -9,6 +9,8 @@ module org.example.eventfinder {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires com.google.gson;
+    requires serpapi.client;
 
     opens org.example.eventfinder to javafx.fxml;
     exports org.example.eventfinder;
