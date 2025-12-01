@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.eventfinder.SearchController">
+   <children>
+      <Button layoutX="240.0" layoutY="175.0" mnemonicParsing="false" onAction="#switchToEvent" text="Event" />
+      <Label fx:id="resultLabel" layoutX="162.0" layoutY="56.0" prefHeight="17.0" prefWidth="134.0" text="Results for ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

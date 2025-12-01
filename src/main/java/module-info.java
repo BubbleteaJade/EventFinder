@@ -1,4 +1,4 @@
-module org.example.eventfinder {
+module Frontend.eventfinder {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -9,7 +9,9 @@ module org.example.eventfinder {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires javafx.base;
+    requires javafx.graphics;
 
-    opens org.example.eventfinder to javafx.fxml;
-    exports org.example.eventfinder;
+    opens Frontend.eventfinder to javafx.fxml;
+    exports Frontend.eventfinder;
 }
