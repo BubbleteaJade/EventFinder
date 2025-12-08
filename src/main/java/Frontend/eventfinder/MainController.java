@@ -1,5 +1,7 @@
 package Frontend.eventfinder;
 
+import Backend.APIIntegration;
+import Backend.Event;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainController {
 //    ArrayList<String> words = new ArrayList<>(
@@ -56,13 +59,17 @@ public class MainController {
     @FXML
     public void switchToSearchResult(ActionEvent event) throws IOException {
 
-        String searchResult = searchBar.getText();
+        String searchResult = searchBar.getText() + " concert";
+
+        //APIIntegretaion (Searc)
+        ArrayList<Event> events =APIIntegration.Search(searchResult);
+//
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("search.fxml"));
         root = loader.load();
 
         SearchController searchController = loader.getController();
-        searchController.displayResult(searchResult);
+        searchController.displayResult(searchResult, events);
 
 //        Parent root = FXMLLoader.load(getClass().getResource("search.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
